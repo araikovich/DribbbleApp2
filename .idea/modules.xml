@@ -3,7 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://D:/Programming/Android/DribbbleApp-master/DribbbleApp-master/DribbbleApp.iml" filepath="D:/Programming/Android/DribbbleApp-master/DribbbleApp-master/DribbbleApp.iml" />
-      <module fileurl="file://$PROJECT_DIR$/DribbbleApp-master.iml" filepath="$PROJECT_DIR$/DribbbleApp-master.iml" />
+      <module fileurl="file://$PROJECT_DIR$/DribbbleAppTest.iml" filepath="$PROJECT_DIR$/DribbbleAppTest.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
     </modules>
   </component>

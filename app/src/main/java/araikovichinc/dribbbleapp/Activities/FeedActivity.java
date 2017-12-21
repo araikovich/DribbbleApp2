@@ -4,6 +4,7 @@ import android.content.Context;
 import android.content.SharedPreferences;
 import android.net.ConnectivityManager;
 import android.os.AsyncTask;
+import android.os.Build;
 import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -40,6 +41,7 @@ public class FeedActivity extends AppCompatActivity implements SwipeRefreshLayou
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        checkTls();
         setContentView(R.layout.activity_feed);
         swipeRefreshLayout = (SwipeRefreshLayout) findViewById(R.id.feed_swipe_refresh);
         swipeRefreshLayout.setOnRefreshListener(this);
@@ -132,7 +134,13 @@ public class FeedActivity extends AppCompatActivity implements SwipeRefreshLayou
         } else {
             return true;
         }
+    }
 
+    private void checkTls(){
+        if (android.os.Build.VERSION.SDK_INT < Build.VERSION_CODES.LOLLIPOP){
+            Toast.makeText(this, "Sorry, Your version of android is not supported", Toast.LENGTH_LONG).show();
+            this.finish();
+        }
     }
 
 
